@@ -1,0 +1,144 @@
+:root {
+    --color1: #98DBC6;
+    --color2: #F7CAC9;
+    --color3: #AED6F1;
+    --color4: #FFFCC4;
+    --blanco: #FFF;
+    --negro: #000;
+
+    --FuentePrincipal: 'Playpen Sans', cursive;
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%; /** 1 rem = 10px **/
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+/** Globales **/
+body {
+    background-color: var(--color1);
+    font-size: 1.6rem;
+    line-height: 1.5;
+}
+
+p {
+    font-size: 1.8rem;
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--blanco);
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+}
+
+.contenedor {
+    max-width: 120rem;
+    margin: 0 auto;
+}
+
+h1, h2, h3 {
+    text-align: center;
+    color: var(--color2);
+    font-family: var(--FuentePrincipal);
+}
+
+h1 {
+    font-size: 4rem;
+}
+
+h2 {
+    font-size: 3.2rem;
+}
+
+h3 {
+    font-size: 2.4rem;
+}
+
+/** Header **/
+.header {
+    display: flex;
+    justify-content: center;
+}
+
+/** Footer **/
+.footer {
+    padding: 1rem 0;
+    margin-top: 2rem;
+}
+
+.footer__texto {
+    font-family: var(--FuentePrincipal);
+    text-align: center;
+    font-size: 2rem;
+}
+
+.header__logo {
+    margin: 3rem 0;
+}
+
+/** Navegacion **/
+.navegacion {
+    background-color: var(--color2);
+    padding: 1rem 0;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.navegacion__enlaces {
+    font-family: var(--FuentePrincipal);
+    color: var(--blanco);
+    font-size: 2rem;
+}
+
+.navegacion__enlaces--activo,
+.navegacion__enlaces:hover {
+    color: var(--color3);
+}
+
+.carousel-container {
+    position: relative;
+    max-width: 100%;
+    overflow: hidden;
+  }
+  
+  .carousel-slide {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+  }
+  
+  .carousel-slide img {
+    width: 100vw;
+    height: auto;
+  }
+  
+  #prevBtn, #nextBtn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1;
+    background-color: #333;
+    color: #fff;
+    padding: 8px 16px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  #prevBtn {
+    left: 10px;
+  }
+  
+  #nextBtn {
+    right: 10px;
+  }
+  
+  
+  
