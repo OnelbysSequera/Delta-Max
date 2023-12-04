@@ -1,7 +1,7 @@
 :root {
-    --color1: #3498db;
-    --color2: #2ecc71;
-    --color3: #f5f5f5;
+    --color1: #FFEBD8;
+    --color2: #FFC5C5;
+    --color3: #C7DCA7;
     --color4: #ff6b00;
     --blanco: #FFF;
     --negro: #000;
@@ -20,7 +20,7 @@ html {
 
 /** Globales **/
 body {
-    background-color: var(--color3);
+    background-color: var(--color1);
     font-size: 1.6rem;
     line-height: 1.5;
 }
@@ -87,7 +87,7 @@ h3 {
 
 /** Navegacion **/
 .navegacion {
-    background-color: var(--color3);
+    background-color: var(--color2);
     padding: 1rem 0;
     display: flex;
     justify-content: center;
