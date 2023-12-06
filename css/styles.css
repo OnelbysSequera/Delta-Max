@@ -1,8 +1,8 @@
 :root {
-    --color1: #FFEBD8;
-    --color2: #FFC5C5;
-    --color3: #C7DCA7;
-    --color4: #ff6b00;
+    --Fondo: #ADD8E6;
+    --NAV: #FFFFFF;
+    --Hover: #FFA500;
+    --verdeMenta: #98FB98;
     --blanco: #FFF;
     --negro: #000;
 
@@ -20,7 +20,7 @@ html {
 
 /** Globales **/
 body {
-    background-color: var(--color1);
+    background-color: var(--Fondo);
     font-size: 1.6rem;
     line-height: 1.5;
 }
@@ -46,7 +46,7 @@ img {
 
 h1, h2, h3 {
     text-align: center;
-    color: var(--color2);
+    color: var(--negro);
     font-family: var(--FuentePrincipal);
 }
 
@@ -87,7 +87,7 @@ h3 {
 
 /** Navegacion **/
 .navegacion {
-    background-color: var(--color2);
+    background-color: var(--NAV);
     padding: 1rem 0;
     display: flex;
     justify-content: center;
@@ -102,7 +102,7 @@ h3 {
 
 .navegacion__enlaces--activo,
 .navegacion__enlaces:hover {
-    color: var(--color4);
+    color: var(--Hover);
 }
 
 .carousel-container {
