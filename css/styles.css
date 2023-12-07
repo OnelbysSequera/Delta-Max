@@ -140,6 +140,40 @@ h3 {
   #nextBtn {
     right: 10px;
   }
+
+  /** Grid **/
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 4rem;
+  }
+  @media (min-width: 768px) {
+    .grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+  }
+
+  .titulo {
+    margin-top: 5rem;
+  }
+
+  /** Categorias **/
+  .categorias {
+    text-align: center;
+    padding: 2rem;
+  }
+
+  .categoria__imagen {
+    width: 20%;
+  }
+
+  .categoria__nombre {
+    font-size: 2rem;
+    font-family: var(--FuentePrincipal);
+    color: var(--negro);
+    margin: 1rem 0;
+    text-align: center;
+  }
   
   
   
