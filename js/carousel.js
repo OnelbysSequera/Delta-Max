@@ -28,4 +28,4 @@ function autoSlide() {
   carouselSlide.style.transform = `translateX(-${counter * slideWidth}px)`;
 }
 
-setInterval(autoSlide, 3000);
+setInterval(autoSlide, 4000);
