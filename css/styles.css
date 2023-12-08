@@ -183,3 +183,11 @@ h3 {
     margin: 1rem 0;
     text-align: center;
   }
+
+  .espaciado-superior {
+    margin-top: 5rem;
+  }
+
+  .espaciado-inferior-sm {
+    margin-bottom: 3rem;
+  }
