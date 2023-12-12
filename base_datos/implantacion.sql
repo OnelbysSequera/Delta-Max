@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 30-11-2023 a las 16:09:58
+-- Tiempo de generación: 10-12-2023 a las 03:52:50
 -- Versión del servidor: 10.4.28-MariaDB
 -- Versión de PHP: 8.0.28
 
@@ -37,13 +37,12 @@ CREATE TABLE `categoria_producto` (
 --
 
 INSERT INTO `categoria_producto` (`id_categoria`, `categoria`) VALUES
-(1, 'Papel'),
-(2, 'Escritura'),
-(3, 'Material de oficina'),
-(4, 'Archivo y organizacion'),
-(5, 'Material de dibujo'),
-(6, 'Material escolar'),
-(7, 'Equipacion de oficina');
+(1, 'Escolar'),
+(2, 'Oficina'),
+(3, 'Manualidad'),
+(4, 'Decoracion'),
+(5, 'Arte'),
+(6, 'Regalos');
 
 -- --------------------------------------------------------
 
@@ -565,6 +564,44 @@ INSERT INTO `ciudades` (`id_ciudad`, `id_estado`, `ciudad`, `capital`) VALUES
 -- --------------------------------------------------------
 
 --
+-- Estructura de tabla para la tabla `comentario`
+--
+
+CREATE TABLE `comentario` (
+  `id_comentario` bigint(20) UNSIGNED NOT NULL,
+  `comment_post_ID` bigint(20) UNSIGNED NOT NULL DEFAULT 0,
+  `autor_comentario` tinytext NOT NULL,
+  `comment_author_email` varchar(100) NOT NULL DEFAULT '',
+  `comment_author_url` varchar(200) NOT NULL DEFAULT '',
+  `comment_author_IP` varchar(100) NOT NULL DEFAULT '',
+  `fecha` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
+  `comment_date_gmt` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
+  `contenido` text NOT NULL,
+  `comment_karma` int(11) NOT NULL DEFAULT 0,
+  `comment_approved` varchar(20) NOT NULL DEFAULT '1',
+  `comment_agent` varchar(255) NOT NULL DEFAULT '',
+  `comment_type` varchar(20) NOT NULL DEFAULT 'comment',
+  `comment_parent` bigint(20) UNSIGNED NOT NULL DEFAULT 0,
+  `user_id` bigint(20) UNSIGNED NOT NULL DEFAULT 0
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_520_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `comentario_usuario-producto`
+--
+
+CREATE TABLE `comentario_usuario-producto` (
+  `id_comentario` int(11) NOT NULL,
+  `id_usuario` int(11) NOT NULL,
+  `fecha` datetime NOT NULL,
+  `contenido` varchar(255) NOT NULL,
+  `id_producto` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+-- --------------------------------------------------------
+
+--
 -- Estructura de tabla para la tabla `compra`
 --
 
@@ -572,7 +609,8 @@ CREATE TABLE `compra` (
   `id_compra` int(11) NOT NULL,
   `fecha` datetime NOT NULL,
   `id_pedido` int(11) NOT NULL,
-  `id_formaPago` int(11) NOT NULL
+  `id_formaPago` int(11) NOT NULL,
+  `id_usuario` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- --------------------------------------------------------
@@ -656,6 +694,18 @@ CREATE TABLE `formapago` (
 INSERT INTO `formapago` (`id_formaPago`, `forma_pago`) VALUES
 (1, 'Efectivo'),
 (2, 'Credito');
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `galeria`
+--
+
+CREATE TABLE `galeria` (
+  `id_galeria` int(11) NOT NULL,
+  `id_producto` int(11) NOT NULL,
+  `imagen` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- --------------------------------------------------------
 
@@ -2273,10 +2323,11 @@ CREATE TABLE `producto` (
   `nombre_producto` varchar(55) NOT NULL,
   `id_categoria` int(11) NOT NULL,
   `precio` float NOT NULL,
-  `status` tinyint(1) NOT NULL,
+  `id_status` int(1) NOT NULL,
   `descripcion` varchar(50) NOT NULL,
   `id_marca` int(11) NOT NULL,
-  `id_inventario` int(11) NOT NULL
+  `id_inventario` int(11) NOT NULL,
+  `img_producto` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- --------------------------------------------------------
@@ -2301,6 +2352,51 @@ INSERT INTO `sexo` (`id_sexo`, `sexo`) VALUES
 -- --------------------------------------------------------
 
 --
+-- Estructura de tabla para la tabla `status_producto`
+--
+
+CREATE TABLE `status_producto` (
+  `id_status` int(11) NOT NULL,
+  `status_disponible` varchar(30) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Volcado de datos para la tabla `status_producto`
+--
+
+INSERT INTO `status_producto` (`id_status`, `status_disponible`) VALUES
+(1, 'Disponible'),
+(2, 'En Espera'),
+(3, 'No Disponible'),
+(4, 'Preorden'),
+(5, 'No visible'),
+(6, 'En Oferta');
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `status_usuario`
+--
+
+CREATE TABLE `status_usuario` (
+  `id_status-usaurio` int(11) NOT NULL,
+  `status` varchar(55) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Volcado de datos para la tabla `status_usuario`
+--
+
+INSERT INTO `status_usuario` (`id_status-usaurio`, `status`) VALUES
+(1, 'Registrado'),
+(2, 'Invitado'),
+(3, 'Bloqueado'),
+(4, 'Premium'),
+(5, 'Inactivo');
+
+-- --------------------------------------------------------
+
+--
 -- Estructura de tabla para la tabla `usuariociente`
 --
 
@@ -2318,18 +2414,18 @@ CREATE TABLE `usuariociente` (
   `id_municipio` int(11) NOT NULL,
   `id_parroquia` int(11) NOT NULL,
   `id_ciudad` int(11) NOT NULL,
-  `online_cliente` tinyint(1) NOT NULL,
   `ultimaSesion_cliente` datetime NOT NULL,
-  `fechaRegistro_cliente` datetime NOT NULL
+  `fechaRegistro_cliente` datetime NOT NULL,
+  `id_status-usuario` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Volcado de datos para la tabla `usuariociente`
 --
 
-INSERT INTO `usuariociente` (`id_cliente`, `nombre_cliente`, `apellido_cliente`, `id_nacionalidadCliente`, `cedula_cliente`, `id_codigoLinea`, `telefono_cliente`, `correo_cliente`, `id_sexo`, `id_estado`, `id_municipio`, `id_parroquia`, `id_ciudad`, `online_cliente`, `ultimaSesion_cliente`, `fechaRegistro_cliente`) VALUES
-(1, 'Julio', 'Paradas', 1, '30518269', 1, '04127090821', 'Julioparadas1001@gmail.com', 1, 22, 1, 81, 43, 1, '2023-11-20 16:34:55', '2023-11-20 16:34:55'),
-(2, 'Julio', 'Paradas', 1, '30518269', 1, '04127090821', 'julio10012002@gmail.com', 1, 22, 1, 81, 43, 1, '2023-11-20 16:38:20', '2023-11-20 16:38:20');
+INSERT INTO `usuariociente` (`id_cliente`, `nombre_cliente`, `apellido_cliente`, `id_nacionalidadCliente`, `cedula_cliente`, `id_codigoLinea`, `telefono_cliente`, `correo_cliente`, `id_sexo`, `id_estado`, `id_municipio`, `id_parroquia`, `id_ciudad`, `ultimaSesion_cliente`, `fechaRegistro_cliente`, `id_status-usuario`) VALUES
+(1, 'Julio', 'Paradas', 1, '30518269', 1, '04127090821', 'Julioparadas1001@gmail.com', 1, 22, 1, 81, 43, '2023-11-20 16:34:55', '2023-11-20 16:34:55', 0),
+(2, 'Julio', 'Paradas', 1, '30518269', 1, '04127090821', 'julio10012002@gmail.com', 1, 22, 1, 81, 43, '2023-11-20 16:38:20', '2023-11-20 16:38:20', 0);
 
 --
 -- Índices para tablas volcadas
@@ -2349,10 +2445,21 @@ ALTER TABLE `ciudades`
   ADD KEY `id_estado` (`id_estado`);
 
 --
+-- Indices de la tabla `comentario_usuario-producto`
+--
+ALTER TABLE `comentario_usuario-producto`
+  ADD PRIMARY KEY (`id_comentario`),
+  ADD KEY `id_producto` (`id_producto`),
+  ADD KEY `id_usuario` (`id_usuario`);
+
+--
 -- Indices de la tabla `compra`
 --
 ALTER TABLE `compra`
-  ADD PRIMARY KEY (`id_compra`);
+  ADD PRIMARY KEY (`id_compra`),
+  ADD KEY `id_usuario` (`id_usuario`),
+  ADD KEY `id_pedido` (`id_pedido`),
+  ADD KEY `id_formaPago` (`id_formaPago`);
 
 --
 -- Indices de la tabla `detalle_producto`
@@ -2372,6 +2479,13 @@ ALTER TABLE `estados`
 --
 ALTER TABLE `formapago`
   ADD PRIMARY KEY (`id_formaPago`);
+
+--
+-- Indices de la tabla `galeria`
+--
+ALTER TABLE `galeria`
+  ADD PRIMARY KEY (`id_galeria`),
+  ADD KEY `id_producto` (`id_producto`);
 
 --
 -- Indices de la tabla `inventario`
@@ -2428,13 +2542,26 @@ ALTER TABLE `producto`
   ADD PRIMARY KEY (`id_producto`),
   ADD KEY `id_marca` (`id_marca`),
   ADD KEY `id_inventario` (`id_inventario`),
-  ADD KEY `id_categoria` (`id_categoria`);
+  ADD KEY `id_categoria` (`id_categoria`),
+  ADD KEY `producto_ibfk_3` (`id_status`);
 
 --
 -- Indices de la tabla `sexo`
 --
 ALTER TABLE `sexo`
   ADD PRIMARY KEY (`id_sexo`);
+
+--
+-- Indices de la tabla `status_producto`
+--
+ALTER TABLE `status_producto`
+  ADD PRIMARY KEY (`id_status`);
+
+--
+-- Indices de la tabla `status_usuario`
+--
+ALTER TABLE `status_usuario`
+  ADD PRIMARY KEY (`id_status-usaurio`);
 
 --
 -- Indices de la tabla `usuariociente`
@@ -2447,7 +2574,10 @@ ALTER TABLE `usuariociente`
   ADD KEY `id_estado` (`id_estado`),
   ADD KEY `id_parroquia` (`id_parroquia`,`id_ciudad`),
   ADD KEY `id_ciudad` (`id_ciudad`),
-  ADD KEY `id_municipio` (`id_municipio`);
+  ADD KEY `id_municipio` (`id_municipio`),
+  ADD KEY `status_cliente` (`id_status-usuario`),
+  ADD KEY `status_usuario` (`id_status-usuario`),
+  ADD KEY `id_status-usuario` (`id_status-usuario`);
 
 --
 -- AUTO_INCREMENT de las tablas volcadas
@@ -2482,6 +2612,12 @@ ALTER TABLE `estados`
 --
 ALTER TABLE `formapago`
   MODIFY `id_formaPago` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
+--
+-- AUTO_INCREMENT de la tabla `galeria`
+--
+ALTER TABLE `galeria`
+  MODIFY `id_galeria` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT de la tabla `inventario`
@@ -2538,6 +2674,18 @@ ALTER TABLE `sexo`
   MODIFY `id_sexo` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
+-- AUTO_INCREMENT de la tabla `status_producto`
+--
+ALTER TABLE `status_producto`
+  MODIFY `id_status` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+
+--
+-- AUTO_INCREMENT de la tabla `status_usuario`
+--
+ALTER TABLE `status_usuario`
+  MODIFY `id_status-usaurio` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+
+--
 -- AUTO_INCREMENT de la tabla `usuariociente`
 --
 ALTER TABLE `usuariociente`
@@ -2552,6 +2700,14 @@ ALTER TABLE `usuariociente`
 --
 ALTER TABLE `ciudades`
   ADD CONSTRAINT `ciudades_ibfk_1` FOREIGN KEY (`id_estado`) REFERENCES `estados` (`id_estado`) ON DELETE CASCADE ON UPDATE CASCADE;
+
+--
+-- Filtros para la tabla `compra`
+--
+ALTER TABLE `compra`
+  ADD CONSTRAINT `compra_ibfk_1` FOREIGN KEY (`id_formaPago`) REFERENCES `formapago` (`id_formaPago`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `compra_ibfk_2` FOREIGN KEY (`id_pedido`) REFERENCES `pedido` (`id_pedido`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `compra_ibfk_3` FOREIGN KEY (`id_usuario`) REFERENCES `usuariociente` (`id_cliente`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
 -- Filtros para la tabla `municipios`
@@ -2575,7 +2731,9 @@ ALTER TABLE `pedido`
 -- Filtros para la tabla `producto`
 --
 ALTER TABLE `producto`
-  ADD CONSTRAINT `producto_ibfk_1` FOREIGN KEY (`id_marca`) REFERENCES `marca` (`id_marca`) ON DELETE CASCADE ON UPDATE CASCADE;
+  ADD CONSTRAINT `producto_ibfk_1` FOREIGN KEY (`id_marca`) REFERENCES `marca` (`id_marca`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `producto_ibfk_2` FOREIGN KEY (`id_categoria`) REFERENCES `categoria_producto` (`id_categoria`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `producto_ibfk_3` FOREIGN KEY (`id_status`) REFERENCES `status_producto` (`id_status`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
 -- Filtros para la tabla `usuariociente`
