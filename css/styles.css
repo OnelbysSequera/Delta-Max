@@ -181,7 +181,7 @@ h3 {
   }
 
   .categoria__imagen {
-    width: 20%;
+    width: 30%;
   }
 
   .categoria__nombre {
@@ -200,4 +200,5 @@ h3 {
     margin-bottom: 3rem;
   }
 
-  /** Estilo para los productos por cada categoria (Mismo diseño, cambian solo las imagenes) **/
+  /** Estilo y grid para los productos por cada categoria
+  (Lo mismo en todas las categoroias, solo cambian las imagenes) **/
