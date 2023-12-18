@@ -202,3 +202,14 @@ h3 {
 
   /** Estilo y grid para los productos por cada categoria
   (Lo mismo en todas las categoroias, solo cambian las imagenes) **/
+  .imagen-fija {
+    width: 354px;
+    height: 354px;
+    object-fit: cover; /* Esto asegura que la imagen se recorte para ajustarse al tamaño sin distorsionarse */
+}
+
+  .texto__producto {
+    color: var(--negro);
+    text-align: center;
+    font-family: var(--FuentePrincipal);
+  }
