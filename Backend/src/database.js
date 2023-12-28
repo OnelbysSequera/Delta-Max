@@ -6,6 +6,7 @@ const connection = mysql.createConnection(credentials)
 connection.connect(err => {
     if (err)//hubo un error en la conexión
         throw err; // rompemos la ejecucción por que no podemos continuar sin DB    
+  
 })
 
 
