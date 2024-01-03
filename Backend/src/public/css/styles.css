@@ -1,0 +1,215 @@
+:root {
+    --Fondo: #ADD8E6;
+    --NAV: #FFFFFF;
+    --Hover: #FFA500;
+    --verdeMenta: #98FB98;
+    --blanco: #FFF;
+    --negro: #000;
+
+    --FuentePrincipal: 'Lato', sans-serif;
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%; /** 1 rem = 10px **/
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+/** Globales **/
+body {
+    background-color: var(--Fondo);
+    font-size: 1.6rem;
+    line-height: 1.5;
+}
+
+p {
+    font-size: 1.8rem;
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--blanco);
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+}
+
+.contenedor {
+    max-width: 120rem;
+    margin: 0 auto;
+}
+
+h1, h2, h3 {
+    text-align: center;
+    color: var(--negro);
+    font-family: var(--FuentePrincipal);
+}
+
+h1 {
+    font-size: 4rem;
+}
+
+h2 {
+    font-size: 3.2rem;
+}
+
+h3 {
+    font-size: 2.4rem;
+}
+
+/** Header **/
+.header {
+    display: flex;
+    justify-content: center;
+}
+
+/** Footer **/
+.footer {
+    padding: 1rem 0;
+    margin-top: 1rem;
+}
+
+.footer__texto {
+    font-family: var(--FuentePrincipal);
+    text-align: center;
+    font-size: 2.5rem;
+    color: var(--negro);
+}
+
+.header__logo {
+    margin: 3rem 0;
+}
+
+/** Navegacion **/
+.navegacion {
+    background-color: var(--NAV);
+    padding: 1rem 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4rem;
+}
+@media (min-width: 768px) {
+  .navegacion {
+      flex-direction: row;
+      justify-content: center;
+      gap: 4rem;
+  }
+}
+
+.navegacion__enlaces {
+    font-family: var(--FuentePrincipal);
+    color: var(--negro);
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+.navegacion__enlaces--activo,
+.navegacion__enlaces:hover {
+    color: var(--Hover);
+}
+
+.carousel-container {
+    position: relative;
+    max-width: 100%;
+    overflow: hidden;
+  }
+  
+  .carousel-slide {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+  }
+  
+  .carousel-slide img {
+    width: 100vw;
+    height: auto;
+  }
+  
+  #prevBtn, #nextBtn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1;
+    background-color: #333;
+    color: #fff;
+    padding: 8px 16px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  #prevBtn {
+    left: 10px;
+  }
+  
+  #nextBtn {
+    right: 10px;
+  }
+
+  /** Grid **/
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 4rem;
+  }
+  @media (min-width: 768px) {
+    .grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+  }
+
+  .titulo {
+    margin-top: 5rem;
+    font-weight: 700;
+    color: var(--negro)
+  }
+
+  .tituloinfo {
+    margin-top: 5rem;
+    font-weight: 400;
+    color: var(--negro);
+  }
+
+  /** Categorias Inicio **/
+  .categorias {
+    text-align: center;
+    padding: 2rem;
+  }
+
+  .categoria__imagen {
+    width: 30%;
+  }
+
+  .categoria__nombre {
+    font-size: 2rem;
+    font-family: var(--FuentePrincipal);
+    color: var(--negro);
+    margin: 1rem 0;
+    text-align: center;
+  }
+
+  .espaciado-superior {
+    margin-top: 5rem;
+  }
+
+  .espaciado-inferior-sm {
+    margin-bottom: 3rem;
+  }
+
+  /** Estilo y grid para los productos por cada categoria
+  (Lo mismo en todas las categoroias, solo cambian las imagenes) **/
+  .imagen-fija {
+    width: 354px;
+    height: 354px;
+    object-fit: cover; /* Esto asegura que la imagen se recorte para ajustarse al tamaño sin distorsionarse */
+}
+
+  .texto__producto {
+    color: var(--negro);
+    text-align: center;
+    font-family: var(--FuentePrincipal);
+  }
