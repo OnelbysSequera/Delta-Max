@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iniciar Sesión</title>
+
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://kit.fontawesome.com/56aef74e76.js" crossorigin="anonymous"></script>
+
+</head>
+<body>
+    <div class="contenido">
+    <header>
+        <div class="logo-titulo">
+            <a href="login.html"><img src="logo.png" class="logopag" alt="LOGO DE LA PAGINA"></a>
+         </div>
+        
+            <nav class="navegacion">
+                <a href="index.html">Inicio</a>
+                <a href="contacto.html">Contacto</a>
+                <a href="register.html">Registrarse</a>
+        </nav>
+    </header>
+
+    <div class="fondo-forml">
+        <div class="contenedor-form login">
+            <h2>INICIAR SESION</h2>
+                <form action="#">
+                    <div class="contenedor-input">
+                        <span class="icono"><i class="fa-sharp fa-solid fa-envelope"></i></span>
+                        <input type="email" required>
+                        <label for="#">Email</label>
+                    </div>
+
+                    <div class="contenedor-input">
+                        <span class="icono"><i class="fa-solid fa-lock"></i></span>
+                        <input type="password" required>
+                        <label for="#">Contraseña</label>
+                    </div>
+
+                    <div class="recordar">
+                        <label for="recordar-sesion"><input name="recordar-sesion" id="recordar-sesion" type="checkbox">Recordar Sesion</label>
+                        <a href="restablecer.html">Recuperar Contraseña</a>
+                    </div>
+
+                    <button type="submit" class="btn">Entrar</button>
+
+                    <p id="mensaje">INGRESANDO</p>
+
+                    <div class="crear-cuenta">
+                        <p>¿No tienes una cuenta? <a href="register.html">Registrate</a></p>
+                    </div>
+                </form>
+        </div>
+    </div>
+</div>
+
+<footer>
+    <p>Copyright © 2022. Todos los derechos reservados.</p>
+    <div class="nav-footer">
+        <a href="#">Condiciones de uso</a>
+        <a href="#">Aviso de privacidad</a>
+        
+    </div>
+
+</footer>
+    
+</body>
+</html>

@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Registrarse</title>
+
+    <link rel="stylesheet" href="styles.css" />
+    <script src="https://kit.fontawesome.com/56aef74e76.js" crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <div class="contenido">
+      <header>
+        <div class="logo-titulo">
+          <a href="login.html"><img src="logo.png" class="logopag" alt="LOGO DE LA PAGINA"/></a>
+        </div>
+
+        <nav class="navegacion">
+          <a href="login.html">Inicio</a>
+          <a href="contacto.html">Contacto</a>
+          <a href="register.html">Iniciar sesión</a>
+        </nav>
+      </header>
+
+      <div class="fondo-formr">
+        <div class="contenedor-form login">
+          <h2>Crear cuenta</h2>
+          <form action="#">
+            <div class="nom-apell">
+              <div class="contenedor-input">
+                <span class="icono"
+                  ><i class="fa-sharp fa-solid fa-user"></i
+                ></span>
+                <input type="text" required />
+                <label for="#">Nombres</label>
+              </div>
+
+              <div class="contenedor-input">
+                <span class="icono"
+                  ><i class="fa-sharp fa-solid fa-user"></i
+                ></span>
+                <input type="text" required />
+                <label for="#">Apellidos</label>
+              </div>
+            </div>
+
+            <div class="contenedor-input">
+              <span class="icono"
+                ><i class="fa-sharp fa-solid fa-passport"></i
+              ></span>
+              <input type="text" required />
+              <label for="#">Cédula</label>
+            </div>
+
+            <div class="contenedor-input">
+              <span class="icono"
+                ><i class="fa-sharp fa-solid fa-envelope"></i
+              ></span>
+              <input type="email" required />
+              <label for="#">Email</label>
+            </div>
+
+            <div class="claves">
+              <div class="contenedor-input">
+                <span class="icono"><i class="fa-solid fa-lock"></i></span>
+                <input type="password" required />
+                <label for="#">Contraseña</label>
+              </div>
+
+              <div class="contenedor-input">
+                <span class="icono"><i class="fa-solid fa-lock"></i></span>
+                <input type="password" required />
+                <label for="#">Repetir Contraseña</label>
+              </div>
+            </div>
+
+            <div class="contenedor-input">
+              <span class="icono"
+                ><i class="fa-sharp fa-solid fa-phone"></i
+              ></span>
+              <input type="text" required />
+              <label for="#">Numero de Teléfono</label>
+            </div>
+
+            <div class="contenedor-seleccion">
+              <div class="selectores">
+                <label for="genero">Genero</label>
+                <div class="select">
+                  <select name="genero" id="genero" required>
+                    <option value="1">Masculino</option>
+                    <option value="2">Femenino</option>
+                    <option value="3">Otro</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="selectores">
+                <label for="estado">Estado</label>
+                <div class="select">
+                  <select name="estado" id="estado" required>
+                    <option value="1">Lara</option>
+                    <option value="2">Yaracuy</option>
+                    <option value="3">Caracas</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="selectores">
+                <label for="municipio">Municipio</label>
+                <div class="select">
+                  <select name="municipio" id="municipio" required>
+                    <option value="1">Peña</option>
+                    <option value="2">Iribarren</option>
+                    <option value="3">San Jose</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="selectores">
+                <label for="parroquia">Parroquia</label>
+                <div class="select">
+                  <select name="parroquia" id="parroquia" required>
+                    <option value="1">San Andres</option>
+                    <option value="2">El Tocuyo</option>
+                    <option value="3">UNEFA</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+
+            <div class="terminos-condic">
+              <label for="terminos">
+              <input name="terminos" type="checkbox" required/>He leido los <a href="terminos.html">Terminos y Condiciones</a> y estoy de acuerdo</label>
+            </div>
+
+            <button type="submit" class="btn">Registar</button>
+
+            <div class="iniciar-sesion">
+              <p>¿Ya tienes una cuenta? <a href="login.html"> Inicia sesión</a></p>
+            </div>
+
+            <p id="mensaje">INGRESANDO</p>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      <p>Copyright © 2022. Todos los derechos reservados.</p>
+      <div class="nav-footer">
+        <a href="#">Condiciones de uso</a>
+        <a href="#">Aviso de privacidad</a>
+      </div>
+    </footer>
+  </body>
+</html>
