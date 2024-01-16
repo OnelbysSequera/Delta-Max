@@ -2751,3 +2751,7 @@ COMMIT;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+
+
+
+INSERT INTO `usuario` (`id_cliente`, `nombre_cliente`, `apellido_cliente`, `id_nacionalidad-cliente`, `cedula_cliente`, `id_codigo-linea`, `telefono_cliente`, `correo_cliente`, `password`, `id_sexo`, `id_estado`, `id_municipio`, `id_parroquia`, `id_ciudad`, `ultima_sesion-cliente`, `fechaRegistro_cliente`, `id_status-usuario`) VALUES (NULL, 'Julio', 'Paradas', '1', '30518269', '1', '7090821', 'julio10012002@gmail.com', '12345', '1', '1', '54', '142', '5', '2024-01-16 12:33:21.000000', '2024-01-16 12:33:21.000000', '1');
