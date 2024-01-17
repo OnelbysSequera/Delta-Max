@@ -76,3 +76,21 @@ body {
     font-size: 25px;
     color: var(--negro);
 }
+
+/** Estilo para el boton de pagar **/
+
+.boton-pago {
+    display: inline-block;
+    padding: 10px 3px;  /* Ajusta el padding para cambiar el tamaño del botón */
+    font-size: 14px;   /* Ajusta el tamaño de la fuente */
+    background-color: #4caf50;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 3px;
+    transition: background-color 0.3s;
+    text-align: center;
+}
+
+.boton-pago:hover {
+    background-color: #45a049;
+}

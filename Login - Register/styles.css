@@ -1,14 +1,23 @@
-@charset "UFT-8";
+:root {
+  --Fondo: #ADD8E6;
+  --NAV: #FFFFFF;
+  --Hover: #FFA500;
+  --verdeMenta: #98FB98;
+  --blanco: #FFF;
+  --negro: #000;
+
+  --FuentePrincipal: 'Lato', sans-serif;
+}
 
 * {
-  font-family: "Poppins", sans-serif;
+  font-family: var(--FuentePrincipal);
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
 body {
-  background: url(fondo.gif);
+  background-color: var(--Fondo);
   background-position: center;
   background-size: 1280px 1000px;
   background-size: cover;
@@ -43,8 +52,9 @@ header {
 .navegacion a {
   position: relative;
   font-size: 1.1rem;
-  color: white;
+  color: var(--negro);
   text-decoration: none;
+  font-family: var(--FuentePrincipal);
   font-weight: 500;
   margin-left: 40px;
 }
@@ -56,7 +66,7 @@ header {
   bottom: -6px;
   left: 0;
   height: 2px;
-  background: #ffffff;
+  background: var(--Hover);
   transform: scaleX(0);
   transform-origin: right;
   transition: transform 0.4s;
@@ -72,7 +82,7 @@ header {
   width: 400px;
   height: 440px;
   margin-top: 40px;
-  background: transparent;
+  background-color: #638889;
   backdrop-filter: blur(20px);
   border: 2px solid rgba(255, 255, 255, 0.5);
   border-radius: 20px;
@@ -91,7 +101,7 @@ header {
 }
 
 .contenedor-form h2 {
-  color: white;
+  color: var(--negro);
   display: flex;
   text-align: center;
   justify-content: center;
@@ -114,7 +124,7 @@ header {
   font-weight: 600;
   pointer-events: none;
   transition: 0.4s;
-  color: white;
+  color: var(--negro);
 }
 
 .contenedor-input input:focus ~ label, .contenedor-input input:valid ~ label {
@@ -146,7 +156,7 @@ header {
   font-weight: 600;
   margin: -5px 0 15px;
   font-size: 0.9em;
-  color: #ffffff;
+  color: var(--negro);
 }
 
 .recordar label input, .terminos-condic label input {
@@ -156,7 +166,7 @@ header {
 
 .recordar a, .terminos-condic a, .iniciar-sesion a, .crear-cuenta a {
   text-decoration: none;
-  color: aqua;
+  color: var(--negro);
 }
 
 .recordar a:hover, .terminos-condic a:hover, .crear-cuenta a:hover {
@@ -203,7 +213,7 @@ header {
 }
 .crear-cuenta p,
 .iniciar-sesion p {
-  color: white;
+  color: var(--negro);
   text-decoration: none;
 }
 
@@ -227,6 +237,13 @@ footer {
   color: #ffffff;
   font-size: 14px;
   position: static;
+}
+
+.footer__texto {
+  font-family: var(--FuentePrincipal);
+  text-align: center;
+  font-size: 25px;
+  color: var(--blanco);
 }
 
 .nav-footer {
@@ -262,7 +279,7 @@ footer {
   height: 900px;
   margin-top: 120px;
   margin-bottom: 100px;
-  background: transparent;
+  background-color: #638889;
   backdrop-filter: blur(20px);
   border: 2px solid rgba(255, 255, 255, 0.5);
   border-radius: 20px;
@@ -279,7 +296,7 @@ footer {
   display: flex;
 }
 .nom-apell .contenedor-input:first-child {
-  color: black;
+  color: var(--negro);
   margin-right: 20px;
 }
 .claves {
@@ -304,7 +321,7 @@ footer {
 .selectores label {
   display: block;
   margin-bottom: 4px;
-  color: white;
+  color: var(--negro);
   font-size: 1em;
   font-weight: 600;
   margin-left: 5px;
@@ -445,8 +462,8 @@ select::-ms-expand {
   }
 
   .logopag {
-    width: 70px;
-    height: 70px;
+    width: 258px;
+    height: 258px;
   }
 
   .recordar {
