@@ -1,0 +1,8 @@
+Bueno compañeros de equipo estos archivos que estoy subiendo aca son para establecer la conexion entre los formularios login y register
+
+Cabe destacar que el codigo esta dirigido a una base de datos "temporal" ya que no pude testear con la base de datos principal
+por problemas de que no me dejaba importar la tabla de usuarios.
+
+tambien voy a subir la base de datos temporal para que prueben que si funciona. pero el objetivo de estos archivos .php
+es que podamos usarlo con la base principal solo cambiando el nombre de donde se van a insertar las columnas, el nombre de la
+base de datos deben cambiarlo de "minegocio" a "implantacion", y quizas alguna que otra variable.
