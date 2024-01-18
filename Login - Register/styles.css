@@ -1,3 +1,5 @@
+@charset "UFT-8";
+
 :root {
   --Fondo: #ADD8E6;
   --NAV: #FFFFFF;
@@ -17,7 +19,7 @@
 }
 
 body {
-  background-color: var(--Fondo);
+  background: url(fondo.jpg);
   background-position: center;
   background-size: 1280px 1000px;
   background-size: cover;
@@ -52,9 +54,8 @@ header {
 .navegacion a {
   position: relative;
   font-size: 1.1rem;
-  color: var(--negro);
+  color: white;
   text-decoration: none;
-  font-family: var(--FuentePrincipal);
   font-weight: 500;
   margin-left: 40px;
 }
@@ -66,7 +67,7 @@ header {
   bottom: -6px;
   left: 0;
   height: 2px;
-  background: var(--Hover);
+  background: #ffffff;
   transform: scaleX(0);
   transform-origin: right;
   transition: transform 0.4s;
@@ -82,7 +83,7 @@ header {
   width: 400px;
   height: 440px;
   margin-top: 40px;
-  background-color: #638889;
+  background: transparent;
   backdrop-filter: blur(20px);
   border: 2px solid rgba(255, 255, 255, 0.5);
   border-radius: 20px;
@@ -101,7 +102,7 @@ header {
 }
 
 .contenedor-form h2 {
-  color: var(--negro);
+  color: white;
   display: flex;
   text-align: center;
   justify-content: center;
@@ -124,7 +125,7 @@ header {
   font-weight: 600;
   pointer-events: none;
   transition: 0.4s;
-  color: var(--negro);
+  color: white;
 }
 
 .contenedor-input input:focus ~ label, .contenedor-input input:valid ~ label {
@@ -156,7 +157,7 @@ header {
   font-weight: 600;
   margin: -5px 0 15px;
   font-size: 0.9em;
-  color: var(--negro);
+  color: #ffffff;
 }
 
 .recordar label input, .terminos-condic label input {
@@ -166,7 +167,7 @@ header {
 
 .recordar a, .terminos-condic a, .iniciar-sesion a, .crear-cuenta a {
   text-decoration: none;
-  color: var(--negro);
+  color: aqua;
 }
 
 .recordar a:hover, .terminos-condic a:hover, .crear-cuenta a:hover {
@@ -213,7 +214,7 @@ header {
 }
 .crear-cuenta p,
 .iniciar-sesion p {
-  color: var(--negro);
+  color: white;
   text-decoration: none;
 }
 
@@ -237,13 +238,6 @@ footer {
   color: #ffffff;
   font-size: 14px;
   position: static;
-}
-
-.footer__texto {
-  font-family: var(--FuentePrincipal);
-  text-align: center;
-  font-size: 25px;
-  color: var(--blanco);
 }
 
 .nav-footer {
@@ -270,7 +264,6 @@ footer {
   width: 100%;
   color: aqua;
   font-size: 1.2em;
-  display: none;
 }
 
 .fondo-formr {
@@ -279,7 +272,7 @@ footer {
   height: 1000px;
   margin-top: 120px;
   margin-bottom: 100px;
-  background-color: #638889;
+  background: transparent;
   backdrop-filter: blur(20px);
   border: 2px solid rgba(255, 255, 255, 0.5);
   border-radius: 20px;
@@ -296,7 +289,7 @@ footer {
   display: flex;
 }
 .nom-apell .contenedor-input:first-child {
-  color: var(--negro);
+  color: black;
   margin-right: 20px;
 }
 .claves {
@@ -321,7 +314,7 @@ footer {
 .selectores label {
   display: block;
   margin-bottom: 4px;
-  color: var(--negro);
+  color: white;
   font-size: 1em;
   font-weight: 600;
   margin-left: 5px;
@@ -443,7 +436,7 @@ select::-ms-expand {
 .selectores-nac label {
   display: block;
   margin-bottom: 4px;
-  color: black;
+  color: white;
   font-size: 1em;
   font-weight: 600;
   margin-left: 5px;
@@ -461,7 +454,6 @@ select::-ms-expand {
   cursor: pointer;
   background-image: none;
 }
-
 
 
 @media (max-width: 768px) {
@@ -489,8 +481,8 @@ select::-ms-expand {
   }
 
   .logopag {
-    width: 258px;
-    height: 258px;
+    width: 70px;
+    height: 70px;
   }
 
   .recordar {
