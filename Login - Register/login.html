@@ -14,32 +14,31 @@
 <body>
     <div class="contenido">
     <header>
-
         <div class="logo-titulo">
-            <a href="login.html"><img src="../img/logo-login.svg" class="logopag" alt="LOGO DE LA PAGINA"></a>
+            <a href="login.html"><img src="../img/logo-login.svg" class="logopag" alt="LOGO DE LA PAGINA"/></a>
          </div>
-
-        <nav class="navegacion">
-            <a class="navegacion__enlaces" href="../index.html">Inicio</a>
-            <a class="navegacion__enlaces" href="">Ofertas</a>
-            <a class="navegacion__enlaces" href="../nosotros.html">Nosotros</a>
-            <a class="navegacion__enlaces" href="register.html">Registrarse</a>
-        </nav>
+        
+            <nav class="navegacion">
+                <a class="navegacion__enlaces" href="../index.html">Inicio</a>
+                <a class="navegacion__enlaces" href="">Ofertas</a>
+                <a class="navegacion__enlaces" href="../nosotros.html">Nosotros</a>
+                <a class="navegacion__enlaces" href="register.html">Registrarse</a>
+            </nav>
     </header>
 
     <div class="fondo-forml">
         <div class="contenedor-form login">
             <h2>INICIAR SESION</h2>
-                <form action="#">
+                <form action="php/login.php" method="POST">
                     <div class="contenedor-input">
                         <span class="icono"><i class="fa-sharp fa-solid fa-envelope"></i></span>
-                        <input type="email" required>
+                        <input type="email"name="correo" required>
                         <label for="#">Email</label>
                     </div>
 
                     <div class="contenedor-input">
                         <span class="icono"><i class="fa-solid fa-lock"></i></span>
-                        <input type="password" required>
+                        <input type="password" name="clave" required>
                         <label for="#">Contraseña</label>
                     </div>
 
@@ -49,9 +48,7 @@
                     </div>
 
                     <button type="submit" class="btn">Entrar</button>
-
-                    <p id="mensaje">INGRESANDO</p>
-
+                    
                     <div class="crear-cuenta">
                         <p>¿No tienes una cuenta? <a href="register.html">Registrate</a></p>
                     </div>
