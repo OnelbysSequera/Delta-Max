@@ -1,5 +1,5 @@
 :root {
-    --Fondo: #ADD8E6;
+    --Fondo: #7BD3EA;
     --NAV: #FFFFFF;
     --Hover: #FFA500;
     --verdeMenta: #98FB98;
@@ -182,7 +182,7 @@ h3 {
   }
 
   .categoria__imagen {
-    width: 30%;
+    width: 40%;
   }
 
   .categoria__nombre {

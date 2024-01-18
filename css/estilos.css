@@ -1,5 +1,5 @@
 :root {
-    --Fondo: #ADD8E6;
+    --Fondo: #7BD3EA;
     --NAV: #FFFFFF;
     --Hover: #FFA500;
     --verdeMenta: #98FB98;
@@ -33,10 +33,29 @@ body {
 }
 
 .producto-imagen {
-    width: 150px;
-    height: 150px;
+    width: 320px;
+    height: 320px;
     object-fit: cover;
     margin-right: 20px;
+}
+
+.logo-carrito {
+    margin-left: 170px;
+    width: 170px;
+    height: 170px;
+}
+
+.titulo-carrito {
+    font-size: 40px;
+    text-align: center;
+}
+
+.nombre-producto {
+    font-size: 25px;
+}
+
+.descripcion-producto {
+    font-size: 18px;
 }
 
 .producto-info h3, .producto-info p {
@@ -57,7 +76,7 @@ body {
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    font-size: 1em;
+    font-size: 2em;
 }
 
 .boton-pago:hover {
