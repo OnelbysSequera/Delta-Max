@@ -4,8 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Establecer nueva contraseña</title>
-
-    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@1,300;1,400;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css" />
     <script src="https://kit.fontawesome.com/56aef74e76.js" crossorigin="anonymous"></script>
 
 </head>
@@ -13,20 +15,22 @@
     <div class="contenido">
     <header>
         <div class="logo-titulo">
-            <a href="login.html"><img src="logo.png" class="logopag" alt="LOGO DE LA PAGINA"></a>
+            <a href="login.html"><img src="../img/logo-login.svg" class="logopag" alt="LOGO DE LA PAGINA"/></a>
          </div>
         
             <nav class="navegacion">
-                <a href="index.html">Inicio</a>
-                <a href="contacto.html">Contacto</a>
-                <a href="register.html">Registrarse</a>
-        </nav>
+                <a class="navegacion__enlaces" href="../index.html">Inicio</a>
+                <a class="navegacion__enlaces" href="">Ofertas</a>
+                <a class="navegacion__enlaces" href="../nosotros.html">Nosotros</a>
+                <a class="navegacion__enlaces" href="login.html">Iniciar sesión</a>
+                <a class="navegacion__enlaces" href="register.html">Registrarse</a>
+            </nav>
     </header>
 
     <div class="fondo-formf">
         <div class="contenedor-form login">
             <h2>Restablecer contraseña</h2>
-                <form action="#">
+                <form action="php/cambiar_contraseña.php" method="POST" id="formulario">
                     
                     <div class="instrucciones">
                         <p class="recordar">! Para restablecer tu cuenta es necesario que introduzcas tu contraseña ¡</p>
@@ -34,15 +38,28 @@
 
                     <div class="contenedor-input">
                         <span class="icono"><i class="fa-solid fa-lock"></i></span>
-                        <input type="password" required>
+                        <input type="password" name="clave" required>
                         <label for="#">Nueva Contraseña</label>
                     </div>
 
                     <div class="contenedor-input">
                         <span class="icono"><i class="fa-solid fa-lock"></i></span>
-                        <input type="password" required>
+                        <input type="password" name="confirmar-clave" required>
                         <label for="#">Repetir Contraseña</label>
                     </div>
+
+                    <script>
+                      const formulario = document.getElementById('formulario');
+                      const clave = document.getElementById('clave');
+                      const confirmarClave = document.getElementById('confirmar-clave');
+
+                      formulario.addEventListener('submit', (event) => {
+                        if (clave.value !== confirmarClave.value) {
+                          event.preventDefault();
+                          alert('Las contraseñas no coinciden. Por favor, inténtalo de nuevo.');
+                        }
+                      });
+                    </script>
 
                     <button type="submit" class="btn">Confirmar</button>
 
@@ -55,13 +72,7 @@
 </div>
 
 <footer>
-    <p>Copyright © 2022. Todos los derechos reservados.</p>
-    <div class="nav-footer">
-        <a href="#">Condiciones de uso</a>
-        <a href="#">Aviso de privacidad</a>
-        
-    </div>
-
+    <p class="footer__texto">E-Commerce | Todos los derechos reservados 2023.</p>
 </footer>
     
 </body>
