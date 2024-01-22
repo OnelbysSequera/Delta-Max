@@ -12,16 +12,17 @@
 </head>
 <body>
     <header class="header">
-        <a href="index.html"></a>
+        <a href="index.php"></a>
         <img class="header__logo" src="img/Logo.png" alt="logo-e-commerce">
     </header>
 
     <nav class="navegacion">
-        <a class="navegacion__enlaces" href="index.html">Inicio</a>
+        <a class="navegacion__enlaces" href="index.php">Inicio</a>
         <a class="navegacion__enlaces" href="">Ofertas</a>
-        <a class="navegacion__enlaces" href="nosotros.html">Nosotros</a>
+        <a class="navegacion__enlaces" href="nosotros.php">Nosotros</a>
         <a class="navegacion__enlaces" href="">Iniciar Sesión</a>
         <a class="navegacion__enlaces" href="">Registrarse</a>
+        <a class="navegacion__enlaces" href="Login - Register/login.php">Cerrar Sesion</a>
     </nav>
 
       <main class="contenedor">

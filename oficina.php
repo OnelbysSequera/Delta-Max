@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>E-Commerce | Escolares</title>
+    <title>E-Commerce | Oficina</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <link rel="stylesheet" href="css/normalize.css"> <!-- Normalize -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -13,42 +13,43 @@
 </head>
 <body>
     <header class="header">
-        <a href="index.html"></a>
+        <a href="index.php"></a>
         <img class="header__logo" src="img/Logo.png" alt="logo-e-commerce">
     </header>
 
     <nav class="navegacion">
-        <a class="navegacion__enlaces navegacion__enlaces--activo" href="index.html">Inicio</a>
+        <a class="navegacion__enlaces navegacion__enlaces--activo" href="index.php">Inicio</a>
         <a class="navegacion__enlaces" href="">Ofertas</a>
         <a class="navegacion__enlaces" href="nosotros.html">Nosotros</a>
-        <a class="navegacion__enlaces" href="Login - Register/login.html">Iniciar Sesión</a>
-        <a class="navegacion__enlaces" href="Login - Register/register.html">Registrarse</a>
+        <a class="navegacion__enlaces" href="Login - Register/login.php">Iniciar Sesión</a>
+        <a class="navegacion__enlaces" href="Login - Register/register.php">Registrarse</a>
+        <a class="navegacion__enlaces" href="Login - Register/login.php">Cerrar Sesion</a>
     </nav>
 
       <main class="contenedor">
-        <h1 class="titulo">Productos de Decoración</h1>
+        <h1 class="titulo">Productos de Oficina</h1>
 
         <div class="container mt-4">
             <!-- Primera fila -->
             <div class="row">
                 <div class="col-md-4 mb-4">
                     <div class="border border-dark border-2 p-4" style="background-color: lightpink;">
-                        <img src="img/P1-D.png" class="img-fluid imagen-fija" alt="Imagen 1">
-                        <h3>Boligrafos de gel PaperMate: <span class="badge bg-primary">5$</span></h3>
+                        <img src="img/P1-O.png" class="img-fluid imagen-fija" alt="Imagen 1">
+                        <h3>Carpeta Exacompta: <span class="badge bg-primary">1.5$</span></h3>
                         <p class="texto__producto">Click para ver detalles del producto.</p>
                     </div>
                 </div>
                 <div class="col-md-4 mb-4">
                     <div class="border border-dark border-2 p-4" style="background-color: lightpink;">
-                        <img src="img/P2-D.png" class="img-fluid imagen-fija" alt="Imagen 2">
-                        <h3>Liquid Paper PaperMate: <span class="badge bg-primary">7$</span></h3>
+                        <img src="img/P2-O.png" class="img-fluid imagen-fija" alt="Imagen 2">
+                        <h3>Agendas Exacompta: <span class="badge bg-primary">2$</span></h3>
                         <p class="texto__producto">Click para ver detalles del producto.</p>
                     </div>
                 </div>
                 <div class="col-md-4 mb-4">
                     <div class="border border-dark border-2 p-4" style="background-color: lightpink;">
-                        <img src="img/P3-D.png" class="img-fluid imagen-fija" alt="Imagen 3">
-                        <h3>Notas Post-It: <span class="badge bg-primary">3.5$</span></h3>
+                        <img src="img/P3-O.png" class="img-fluid imagen-fija" alt="Imagen 3">
+                        <h3>PortaBoligrafos Exacompta: <span class="badge bg-primary">3$</span></h3>
                         <p class="texto__producto">Click para ver detalles del producto.</p>
                     </div>
                 </div>
@@ -58,22 +59,22 @@
             <div class="row mt-4">
                 <div class="col-md-4 mb-4">
                     <div class="border border-dark border-2 p-4" style="background-color: lightpink;">
-                        <img src="img/P4-D.png" class="img-fluid imagen-fija" alt="Imagen 4">
-                        <h3>Caja de colores PaperMate: <span class="badge bg-primary">5$</span></h3>
+                        <img src="img/P4-O.png" class="img-fluid imagen-fija" alt="Imagen 4">
+                        <h3>Calculadora Exacompta: <span class="badge bg-primary">20$</span></h3>
                         <p class="texto__producto">Click para ver detalles del producto.</p>
                     </div>
                 </div>
                 <div class="col-md-4 mb-4">
                     <div class="border border-dark border-2 p-4" style="background-color: lightpink;">
-                        <img src="img/P5-D.png" class="img-fluid imagen-fija" alt="Imagen 5">
-                        <h3>Libreta escolar PaperMate: <span class="badge bg-primary">2$</span></h3>
+                        <img src="img/P5-O.png" class="img-fluid imagen-fija" alt="Imagen 5">
+                        <h3>Archivadores Exacompta: <span class="badge bg-primary">7$</span></h3>
                         <p class="texto__producto">Click para ver detalles del producto.</p>
                     </div>
                 </div>
                 <div class="col-md-4 mb-4">
                     <div class="border border-dark border-2 p-4" style="background-color: lightpink;">
-                        <img src="img/P6-D.png" class="img-fluid imagen-fija" alt="Imagen 6">
-                        <h3>Caja de colores PaperMate:  <span class="badge bg-primary">7$</span></h3>
+                        <img src="img/P6-O.png" class="img-fluid imagen-fija" alt="Imagen 6">
+                        <h3>Papel Exacompta:  <span class="badge bg-primary">1$</span></h3>
                         <p class="texto__producto">Click para ver detalles del producto.</p>
                     </div>
                 </div>

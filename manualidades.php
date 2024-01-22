@@ -18,11 +18,12 @@
     </header>
 
     <nav class="navegacion">
-        <a class="navegacion__enlaces navegacion__enlaces--activo" href="index.html">Inicio</a>
+        <a class="navegacion__enlaces navegacion__enlaces--activo" href="index.php">Inicio</a>
         <a class="navegacion__enlaces" href="">Ofertas</a>
         <a class="navegacion__enlaces" href="nosotros.html">Nosotros</a>
-        <a class="navegacion__enlaces" href="Login - Register/login.html">Iniciar Sesión</a>
-        <a class="navegacion__enlaces" href="Login - Register/register.html">Registrarse</a>
+        <a class="navegacion__enlaces" href="Login - Register/login.php">Iniciar Sesión</a>
+        <a class="navegacion__enlaces" href="Login - Register/register.php">Registrarse</a>
+        <a class="navegacion__enlaces" href="Login - Register/login.php">Cerrar Sesion</a>
     </nav>
 
       <main class="contenedor">

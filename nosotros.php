@@ -9,6 +9,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@1,300;1,400;1,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css"> <!-- CSS -->
+
 </head>
 <body>
     <header class="header">
@@ -17,15 +18,15 @@
     </header>
 
     <nav class="navegacion">
-        <a class="navegacion__enlaces" href="index.html">Inicio</a>
+        <a class="navegacion__enlaces" href="index.php">Inicio</a>
         <a class="navegacion__enlaces" href="">Ofertas</a>
-        <a class="navegacion__enlaces navegacion__enlaces--activo" href="nosotros.html">Nosotros</a>
-        <a class="navegacion__enlaces" href="Login - Register/login.html">Iniciar Sesión</a>
-        <a class="navegacion__enlaces" href="Login - Register/register.html">Registrarse</a>
+        <a class="navegacion__enlaces navegacion__enlaces--activo" href="nosotros.php">Nosotros</a>
+        <a class="navegacion__enlaces" href="Login - Register/login.php">Iniciar Sesión</a>
+        <a class="navegacion__enlaces" href="Login - Register/register.php">Registrarse</a>
     </nav>
 
       <main class="contenedor">
-        <h1 class="titulo">Conoce más sobre mi tienda.</h1>
+        <h1 class="titulo">¡Conocenos!</h1>
 
         <div class="nosotros">
         <div class="nosotros__contenido">
@@ -39,16 +40,11 @@
                 Curabitur consequat arcu a vehicula blandit.
                 Suspendisse vulputate nulla id nulla hendrerit gravida. Etiam accumsan quis eros at finibus.
             </p>
-
-            <p class="texto__nosotros">
-                Aenean porttitor quam eu sapien auctor, in aliquam ex viverra.
-                Donec volutpat, erat ac fringilla aliquam, urna diam accumsan magna, nec pretium eros turpis sit amet sapien.
-                In sodales nunc orci, vitae rhoncus odio iaculis sed. Curabitur in rhoncus urna, at lobortis mauris.
-                Nullam feugiat, lacus et molestie aliquet, purus ante tincidunt lectus, in sagittis orci quam non massa.
-                Vestibulum nec pulvinar lorem. Duis urna arcu, mollis et mattis eu, ullamcorper nec augue.
-            </p>
         </div>
-        <img class="nosotros__imagen" src="img/nosotros.jpeg" alt="imagen nosotros">
+        <div class="imgenNosotros">
+            <img class="nosotros__imagen" src="img/Conocenos2.png" alt="imagen nosotros">
+
+        </div>
     </div>
       </main>
 

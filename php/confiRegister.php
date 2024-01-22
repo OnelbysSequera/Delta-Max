@@ -1,5 +1,5 @@
 <?php
-    include 'conexion.php';
+    include 'confiConexion.php';
 
     $nombre = $_POST['nombre'];
     $correo = $_POST['correo'];
@@ -14,7 +14,7 @@
             Este correo ya esta registrado
         </div>
         <script>
-            window.location = "http://localhost/proyecto_defendido/Delta-Max-main/Delta-Max-main/Login%20-%20Register/register.php";
+            window.location = "http://localhost/proyecto_implantacion/Login%20-%20Register/register.php";
         </script>
         ';
 
@@ -30,13 +30,13 @@
         echo '
         <script>
             alert("Usuario guardado exitosamente");
-            window.location = "http://localhost/proyecto_defendido/Delta-Max-main/Delta-Max-main/Login%20-%20Register/login.php";
+            window.location = "http://localhost/proyecto_implantacion/Login%20-%20Register/login.php";
         </script>';
     }else{
         echo '
         <script>
             alert("Usuario no pudo ser guardado exitosamente");
-            window.location = "http://localhost/proyecto_defendido/Delta-Max-main/Delta-Max-main/Login%20-%20Register/register.php";
+            window.location = "http://localhost/proyecto_implantacion/Login%20-%20Register/register.php";
         </script>';
     }
     mysqli_close($conexion);

@@ -19,7 +19,7 @@
 }
 
 body {
-  background: url(fondo.jpg);
+  background-image: url(fondo6.jpg);
   background-position: center;
   background-size: 1280px 1000px;
   background-size: cover;
@@ -185,9 +185,9 @@ header {
 .btn {
   width: 100%;
   height: 45px;
-  color: #fff;
+  color: #fff7f7;
   outline: none;
-  background: black;
+  background-color: rgb(147, 3, 204);
   font-size: 1em;
   border-radius: 5px;
   border: none;
@@ -326,8 +326,8 @@ footer {
   height: 40px;
   border-radius: 8px;
   margin-right: 10px;
-  background-color: black;
-  color: white;
+  background-color: rgb(226, 188, 231);
+  color: rgb(7, 6, 6);
   cursor: pointer;
   background-image: none;
 }
@@ -365,7 +365,7 @@ select::-ms-expand {
   top: 0;
   right: 0;
   padding: 0.8em;
-  background-color: aqua;
+  background-color: rgb(251, 253, 106);
   transition: 0.25s all ease;
   pointer-events: none;
 }
@@ -449,8 +449,8 @@ select::-ms-expand {
   height: 40px;
   border-radius: 8px;
   margin-right: 10px;
-  background-color: black;
-  color: white;
+  background-color: rgb(226, 188, 231);
+  color: rgb(7, 6, 6);
   cursor: pointer;
   background-image: none;
 }

@@ -18,11 +18,12 @@
     </header>
 
     <nav class="navegacion">
-        <a class="navegacion__enlaces navegacion__enlaces--activo" href="index.html">Inicio</a>
+        <a class="navegacion__enlaces navegacion__enlaces--activo" href="index.php">Inicio</a>
         <a class="navegacion__enlaces" href="">Ofertas</a>
-        <a class="navegacion__enlaces" href="nosotros.html">Nosotros</a>
-        <a class="navegacion__enlaces" href="Login - Register/login.html">Iniciar Sesion</a>
-        <a class="navegacion__enlaces" href="Login - Register/register.html">Registrarse</a>
+        <a class="navegacion__enlaces" href="nosotros.php">Nosotros</a>
+        <a class="navegacion__enlaces" href="Login - Register/login.php">Iniciar Sesion</a>
+        <a class="navegacion__enlaces" href="Login - Register/register.php">Registrarse</a>
+        <a class="navegacion__enlaces" href="Login - Register/login.php">Cerrar Sesion</a>
     </nav>
 
     <div class="carousel-container">
@@ -40,7 +41,7 @@
       <main class="contenedor">
 
         <!-- Información Importante -->
-        <h2 class="tituloinfo">¡INFORMACIÓN IMPORTANTE!</h2>
+        <h2 class="tituloinfo">¡INFORMACIÓN!</h2>
         <div class="container">
             <div class="row espaciado-superior">
               <div class="col-md-4 espaciado-inferior-sm">
@@ -58,7 +59,7 @@
 
         <div class="grid">
             <div class="categorias">
-                <a href="escolares.html">
+                <a href="escolares.php">
                 <img class="categoria__imagen" src="img/cat1.svg" alt="categoria1">
                 <div class="categoria__informacion">
                     <p class="categoria__nombre">Escolares</p>
@@ -66,7 +67,7 @@
                 </a>
             </div> <!-- Categorias fin -->
             <div class="categorias">
-                <a href="oficina.html">
+                <a href="oficina.php">
                 <img class="categoria__imagen" src="img/cat2.svg" alt="categoria1">
                 <div class="categoria__informacion">
                     <p class="categoria__nombre">Oficina</p>
@@ -74,7 +75,7 @@
                 </a>
             </div> <!-- Categorias fin -->
             <div class="categorias">
-                <a href="manualidades.html">
+                <a href="manualidades.php">
                 <img class="categoria__imagen" src="img/cat3.svg" alt="categoria1">
                 <div class="categoria__informacion">
                     <p class="categoria__nombre">Manualidades</p>
@@ -82,7 +83,7 @@
                 </a>
             </div> <!-- Categorias fin -->
             <div class="categorias">
-                <a href="decoracion.html">
+                <a href="decoracion.php">
                 <img class="categoria__imagen" src="img/cat4.svg" alt="categoria1">
                 <div class="categoria__informacion">
                     <p class="categoria__nombre">Decoración</p>
@@ -90,7 +91,7 @@
                 </a>
             </div> <!-- Categorias fin -->
             <div class="categorias">
-                <a href="arte.html">
+                <a href="arte.php">
                 <img class="categoria__imagen" src="img/cat5.svg" alt="categoria1">
                 <div class="categoria__informacion">
                     <p class="categoria__nombre">Arte</p>
@@ -98,7 +99,7 @@
                 </a>
             </div> <!-- Categorias fin -->
             <div class="categorias">
-                <a href="regalos.html">
+                <a href="regalos.php">
                 <img class="categoria__imagen" src="img/cat6.svg" alt="categoria1">
                 <div class="categoria__informacion">
                     <p class="categoria__nombre">Regalos</p>

@@ -18,37 +18,40 @@
     </header>
 
     <nav class="navegacion">
-        <a class="navegacion__enlaces navegacion__enlaces--activo" href="index.html">Inicio</a>
+        <a class="navegacion__enlaces navegacion__enlaces--activo" href="index.php">Inicio</a>
         <a class="navegacion__enlaces" href="">Ofertas</a>
         <a class="navegacion__enlaces" href="nosotros.html">Nosotros</a>
-        <a class="navegacion__enlaces" href="Login - Register/login.html">Iniciar Sesión</a>
-        <a class="navegacion__enlaces" href="Login - Register/register.html">Registrarse</a>
+        <a class="navegacion__enlaces" href="Login - Register/login.php">Iniciar Sesión</a>
+        <a class="navegacion__enlaces" href="Login - Register/register.php">Registrarse</a>
+        <a class="navegacion__enlaces" href="Login - Register/login.php">Cerrar Sesion</a>
     </nav>
 
       <main class="contenedor">
-        <h1 class="titulo">Productos de Arte</h1>
+        <h1 class="titulo">Productos Escolares</h1>
 
         <div class="container mt-4">
             <!-- Primera fila -->
             <div class="row">
                 <div class="col-md-4 mb-4">
                     <div class="border border-dark border-2 p-4" style="background-color: lightpink;">
-                        <img src="img/P1-A.png" class="img-fluid imagen-fija" alt="Imagen 1">
-                        <h3>Pintura Acrilica Liquitex: <span class="badge bg-primary">4$</span></h3>
+                        <a href="detalles.html">
+                        <img src="img/P1-E.png" class="img-fluid imagen-fija" alt="Imagen 1">
+                        </a>
+                        <h3>Caja de lapices Pointer: <span class="badge bg-primary">3$</span></h3>
                         <p class="texto__producto">Click para ver detalles del producto.</p>
                     </div>
                 </div>
                 <div class="col-md-4 mb-4">
                     <div class="border border-dark border-2 p-4" style="background-color: lightpink;">
-                        <img src="img/P2-A.png" class="img-fluid imagen-fija" alt="Imagen 2">
-                        <h3>Pinceles Liquitex: <span class="badge bg-primary">7$</span></h3>
+                        <img src="img/P2-E.png" class="img-fluid imagen-fija" alt="Imagen 2">
+                        <h3>Caja de borradores Pointer: <span class="badge bg-primary">5$</span></h3>
                         <p class="texto__producto">Click para ver detalles del producto.</p>
                     </div>
                 </div>
                 <div class="col-md-4 mb-4">
                     <div class="border border-dark border-2 p-4" style="background-color: lightpink;">
-                        <img src="img/P3-A.png" class="img-fluid imagen-fija" alt="Imagen 3">
-                        <h3>Marcadores Liquitex: <span class="badge bg-primary">5$</span></h3>
+                        <img src="img/P3-E.png" class="img-fluid imagen-fija" alt="Imagen 3">
+                        <h3>Caja de sacapuntas Pointer: <span class="badge bg-primary">5$</span></h3>
                         <p class="texto__producto">Click para ver detalles del producto.</p>
                     </div>
                 </div>
@@ -58,22 +61,22 @@
             <div class="row mt-4">
                 <div class="col-md-4 mb-4">
                     <div class="border border-dark border-2 p-4" style="background-color: lightpink;">
-                        <img src="img/P4-A.png" class="img-fluid imagen-fija" alt="Imagen 4">
-                        <h3>Pintura ceramicas Duncan: <span class="badge bg-primary">7$</span></h3>
+                        <img src="img/P4-E.png" class="img-fluid imagen-fija" alt="Imagen 4">
+                        <h3>Caja de colores Pointer: <span class="badge bg-primary">5$</span></h3>
                         <p class="texto__producto">Click para ver detalles del producto.</p>
                     </div>
                 </div>
                 <div class="col-md-4 mb-4">
                     <div class="border border-dark border-2 p-4" style="background-color: lightpink;">
-                        <img src="img/P5-A.png" class="img-fluid imagen-fija" alt="Imagen 5">
-                        <h3>Caja de colores Prismacolor: <span class="badge bg-primary">9$</span></h3>
+                        <img src="img/P5-E.png" class="img-fluid imagen-fija" alt="Imagen 5">
+                        <h3>Tijeras escolares Pointer: <span class="badge bg-primary">4$</span></h3>
                         <p class="texto__producto">Click para ver detalles del producto.</p>
                     </div>
                 </div>
                 <div class="col-md-4 mb-4">
                     <div class="border border-dark border-2 p-4" style="background-color: lightpink;">
-                        <img src="img/P6-A.png" class="img-fluid imagen-fija" alt="Imagen 6">
-                        <h3>Block de dibujo Canson:  <span class="badge bg-primary">3$</span></h3>
+                        <img src="img/P6-E.png" class="img-fluid imagen-fija" alt="Imagen 6">
+                        <h3>Pega blanca Pointer:  <span class="badge bg-primary">2.5$</span></h3>
                         <p class="texto__producto">Click para ver detalles del producto.</p>
                     </div>
                 </div>
