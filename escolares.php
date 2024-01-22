@@ -34,7 +34,7 @@
             <div class="row">
                 <div class="col-md-4 mb-4">
                     <div class="border border-dark border-2 p-4" style="background-color: lightpink;">
-                        <a href="detalles.html">
+                        <a href="detalles.php">
                         <img src="img/P1-E.png" class="img-fluid imagen-fija" alt="Imagen 1">
                         </a>
                         <h3>Caja de lapices Pointer: <span class="badge bg-primary">3$</span></h3>

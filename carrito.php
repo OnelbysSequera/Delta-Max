@@ -25,7 +25,7 @@
         <div class="total">
             <p>Total: $<span class="precio-total">3</span></p>
         </div>
-        <a href="pago.html" class="boton-pago">Proceder al Pago</a>
+        <a href="pago.php" class="boton-pago">Proceder al Pago</a>
     </div>
 
     <footer>

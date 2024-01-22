@@ -38,7 +38,7 @@
 
                     <form class="formulario">
                         <input class="formulario__campo" type="number" placeholder="Cantidad" min="1">
-                        <a href="carrito.html" class="formulario__submit">Agregar al carrito</a>
+                        <a href="carrito.php" class="formulario__submit">Agregar al carrito</a>
                     </form>
                 </div>
             </div>

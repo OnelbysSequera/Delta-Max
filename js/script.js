@@ -6,7 +6,7 @@ function realizarPago() {
         confirmButtonText: 'Volver a la página de inicio'
     }).then((result) => {
         if (result.isConfirmed) {
-            window.location.href = "index.html"; // Cambia la ruta según sea necesario
+            window.location.href = "index.php"; // Cambia la ruta según sea necesario
         }
     });
 }
